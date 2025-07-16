@@ -35,6 +35,8 @@ Search in the top search bar `billing` and click on the first entry to open the 
 
 ### Set a budget to save money
 
+![screenshot](https://github.com/MuhammadSahimBhaur/AWScheatsheet/blob/main/img2.png?raw=true)
+
 
 
 
