@@ -23,7 +23,20 @@ Creating user groups allows for easier allocation of pollicies. We can also crea
 
 We can assign a new user the user group when are creating the new user. We can then download the .csv file containing the credential's to our new user's account
 
-> ⚠️ Do note: You can only access this once. Not later.
+> ⚠️ Do note: You can only access this .csv file once. Not later.
+
+AWS identity center can be used for tons of employees. AWS organization is an overall governing account for different subaccounts.
+
+## AWS Billing
+
+Go to cost explorer (in the "AWS Cost Management" page) to check if all the resources have been turned off and deleted.
+
+Search in the top search bar `billing` and click on the first entry to open the billing dashboard. You can now go to `Billing preferences` to get alerts when a free tier is running out.
+
+### Set a budget to save money
+
+
+
 
 
 
