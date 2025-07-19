@@ -76,14 +76,44 @@ sudo apt upgrade
 > Note; we restart the intance if a kernal update is done.
 
 
-## AMI Snapshot
+## Clone a server; AMI Snapshot
 
 Note down the availability zone. Note down the security group as well. Click on the "Actions" dropdown and click "Create Image" in image and templates. Do not select "No reboot".
 
 > Reserved instances can be used to tell AWS for future compute.
 > Reserved instances are instance type exclusive. So a t3 won't reserve coupon won't work for t4 coupon.
 
-In `AWS Cost Management` you can also go for a savings plans which only restricts you to a specific instance type.
+ ----- Money Saving tip! -----
+
+> 💸 In `AWS Cost Management` you can also go for a savings plans which only restricts you to a specific instance type.
+
+
+#  Security Groups
+
+Scurity groups are like simple firewalls that only allow traffic to flow that has originated from our server. You can't edit security group name once they've been created. 
+
+> 🚨 You can **copy** security groups! And then change eacgh instance's security group.
+
+An instance can have multiple security groups, which means the rules **get added up**.
+
+
+# Virtual Private Cloud
+
+VPC is indicated by a $${\color{green}green}$$ box. Every VPC has non-routable IPs which are used to hookup to other services. Search "vpc" and go to "your vpcs" to check all vpc you have. 
+
+> ⚠️ NEVER DELETE THE DEFAULT VPC
+
+
+We can create different VPCs for different businesses. You have A LOT of usable IP addresses. You can then create subnets and divide these IP addresses. 
+
+There are default subnets that already exist in the default VPC. 
+
+Create a public subnet for servers exposed to public internet traffic. Then create a private subnet which includes more protected internal services like database and file servers. 
+
+
+
+
+
 
 
 
