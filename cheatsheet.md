@@ -110,6 +110,14 @@ There are default subnets that already exist in the default VPC.
 
 Create a public subnet for servers exposed to public internet traffic. Then create a private subnet which includes more protected internal services like database and file servers. 
 
+![local availability zones and VPCs](https://github.com/MuhammadSahimBhaur/AWScheatsheet/blob/main/img3.png?raw=true)
+
+> A Local Zone is an extension of an AWS Region in geographic proximity to your users. Local Zones have their own connections to the internet and support AWS Direct Connect, so that resources created in a Local Zone can serve applications that require low latency.
+> To use a Local Zone, you must first enable it. Next, you create a subnet in the Local Zone. Finally, you launch resources in the Local Zone subnet. For more detailed instructions, see Getting started with AWS Local Zones.
+> The following diagram illustrates an account with a VPC in the AWS Region us-west-2 that is extended to the Local Zone us-west-2-lax-1. Each zone in the VPC has one subnet, and each subnet has one EC2 instance.
+
+
+
 
 
 
