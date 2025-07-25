@@ -140,7 +140,26 @@ Elastic IPs are billed even when not in used unless they are released. You can s
 You will also create a new security group for load balancers. While creating the security group you set the destination as other security groups that have the desired EC2 instances associated with them. This way they can recieve directly from the ALB (Application Load Balancer).
 
 
+# IaaS Storage
 
+Virtual drives (Elastic Block Store) are used to store data with strectchable storage. You can create a volume (a new drive) and "attach" to an instance. This new volume has to be formatted to be made useful. To do this you will need to access your machine via SSH and set it up.
+
+You can reattach (to add it to another instance) and upgrade the space. If you add more space you'll need to format it too. 
+
+For backups you can take periodic AMI snapshots. 
+
+> ⚠️ Once an EBS is attached to an intance there is no way to "share files" with other instacnes.
+
+
+EFS isn't as fast as EBS. Obviously because EBS is closer to your instance. 
+
+## EFS
+
+You can create and attach volumes to your instances. You will then use linux commands to connect the EFS to your instances.
+
+## S3
+
+Like dropbox. 
 
 
 
