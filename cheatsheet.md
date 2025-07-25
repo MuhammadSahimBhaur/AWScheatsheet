@@ -104,7 +104,7 @@ VPC is indicated by a $${\color{green}green}$$ box. Every VPC has non-routable I
 > ⚠️ NEVER DELETE THE DEFAULT VPC
 
 
-We can create different VPCs for different businesses. You have A LOT of usable IP addresses. You can then create subnets and divide these IP addresses. 
+We can create different VPCs for different businesses. You have A LOT of usable IP addresses. You can then create `subnets` and divide these IP addresses. This allows for appyling different networking rules for different subnets.
 
 There are default subnets that already exist in the default VPC. 
 
@@ -115,6 +115,36 @@ Create a public subnet for servers exposed to public internet traffic. Then crea
 > A Local Zone is an extension of an AWS Region in geographic proximity to your users. Local Zones have their own connections to the internet and support AWS Direct Connect, so that resources created in a Local Zone can serve applications that require low latency.
 > To use a Local Zone, you must first enable it. Next, you create a subnet in the Local Zone. Finally, you launch resources in the Local Zone subnet. For more detailed instructions, see Getting started with AWS Local Zones.
 > The following diagram illustrates an account with a VPC in the AWS Region us-west-2 that is extended to the Local Zone us-west-2-lax-1. Each zone in the VPC has one subnet, and each subnet has one EC2 instance.
+
+
+# Internet and NAT gateways
+
+NAT gateways allow one way traffic with a single IP address while a internet gateway allows for two-way traffic and can allow public access. We can assign a NAT gateway to a private subnet.
+
+## Elastic IP Address
+
+A public IP is assigned at random when an instance is spun up however whenever an instance reboots a new random IP is assigned. This becomes a major problem when the IP address is hard coded in DNS. 
+
+Elastic IPs are billed even when not in used unless they are released. You can select elastic IPs and under the Actions pulldown click on the "Associate Elastic IP Address" to bind the elastic ip to an instance.
+
+
+## Elastic Load Balancers
+
+1. Application Load Balancer; Great for web traffic
+2. Network Load Balancer; Fast but not very specific
+3. Gateway Load Balancer;  Switching traffic
+
+> Note: Select public subnet if private and public subnets are created.
+
+
+You will also create a new security group for load balancers. While creating the security group you set the destination as other security groups that have the desired EC2 instances associated with them. This way they can recieve directly from the ALB (Application Load Balancer).
+
+
+
+
+
+
+
 
 
 
