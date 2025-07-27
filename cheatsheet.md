@@ -153,13 +153,34 @@ For backups you can take periodic AMI snapshots.
 
 EFS isn't as fast as EBS. Obviously because EBS is closer to your instance. 
 
-## EFS
+## NAS with EFS (Shared file storage)
 
-You can create and attach volumes to your instances. You will then use linux commands to connect the EFS to your instances.
+You can **create** and **attach** volumes to your instances. You will then use linux commands to connect the EFS to your instances.
+
+> Note: You can use FSx for file storage between both linux and windows instances.
 
 ## S3
 
-Like dropbox. 
+Like dropbox. We can use the AWS CLI to upload and download files.
+
+## AWS SDK
+
+You can use the AWS SDk to manipulate files in the S3 bucket from our server. It will require our access key and secret. 
+
+> Question 🙋: How to share access key and secret without compromising the whole account? ⁉️
+
+To solve this we can create an `IAM Role` for the instance and only give the minimum permissions. We create a role with full s3 access and then assign that role to the EC2 instance by going into
+
+```bash
+Actions > Security > Modify IAM Role
+```
+
+Then change the role to the one we created. Now we don't need the access key and the role settings are enough for manipulating S3 using the SDK.
+
+## IAM Resources
+
+
+ 
 
 
 
