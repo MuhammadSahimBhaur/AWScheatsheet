@@ -180,14 +180,39 @@ Then change the role to the one we created. Now we don't need the access key and
 ## IAM Resources
 
 
+![AWS Resources](https://github.com/MuhammadSahimBhaur/AWScheatsheet/blob/main/img4.png?raw=true)
+
+
+> We can store passwords using a secrets manager when calling AWS services from external sources(outside of aws).
+
+
+
+
+# DBaaS
+
+What type of data are we talking about?
+
+- Big Data; Historical data with limited read
+- Relational; Monthly reports e.t.c.
+- Queue; Large stream of data, insert data into the DB after aggregating some amount of data
+- NoSQL; Storing more abjects and don't require a lot of reporting
+
+
+> Important terms; RDS, ElastiCache (Memcached & Redis), Data lakes, Red shift (large streams of data with reporting)
+
+## Queue
+
+**Kinesis**
+Handle a large amount of streams
+
+
+**Simple Queue Service**
+Simpler but more expense
+
+**Simple Notification Service**
+Sending emails
+
  
-
-
-
-
-
-
-
 
 
 
