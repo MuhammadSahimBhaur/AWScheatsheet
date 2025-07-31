@@ -213,11 +213,17 @@ Simpler but more expense
 Sending emails
 
  
+# Platform as a Service (PaaS)
 
 
 
+## Elastic Beanstalk & Amazon Lightsail
 
+Fully managed services
 
+## Elastic Container Service
+
+ECS is a container orchestration tool. We create ECS clusters and within thos clusters we can create nodes. We can store our container images on Elastic Container Registry.  
 
 
 
